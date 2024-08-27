@@ -9,7 +9,6 @@ elRegisterForm.addEventListener("submit", function(e) {
     };
 
     localStorage.setItem("registeredUser", JSON.stringify(newData));
-    alert("Ro'yxatdan o'tish muvaffaqiyatli o'tdi!");
 
     setTimeout(() => location.pathname = "/", 1000);
 });
