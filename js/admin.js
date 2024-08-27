@@ -8,8 +8,7 @@ function handleClickLogOutBtn(){
         location.pathname="index.html"
         window.localStorage.clear()
     }
-})
-
+}
 
 
                

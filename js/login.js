@@ -1,25 +1,14 @@
 let elLoginForm=document.querySelector(".login-form")
-
-elLoginForm.addEventListener("submit",(evt)=>{
-    evt.preventDefault();
-    let regex=/[1-9]/
-    const userData={
-        username:evt.target.username.value,
-        password:evt.target.password.value
+elLoginForm.addEventListener("submit", function(e){
+    e.preventDefault()
+    const data={
+        username:e.target.username.value,
+        password:e.target.password.value
     }
-    if(regex.test(userData.password)){
-        
-        if(userData.username=="shaxzoda" && userData.password=="123"){
-            window.localStorage.setItem("userData", JSON.stringify(userData))
-            setTimeout(() =>{
-                location.pathname="./admin.html"
-            },1000)
-        }
-        else{
-            alert("Failed!")
-        }
+    if(data.username=="shaxzoda" && data.password=="123"){
+    location.pathname="./admin.html" 
     }
-    else{
-        alert("Password includes only numbers!")
-    }
+    else(
+        alert("Xato malumot kiritildi!")
+    )
 })
